@@ -1,0 +1,49 @@
+<div class="container" style="text-align: center;">
+    <br/><br/>
+     <h1>Employee Registration Form</h1><br/>
+      <form>
+         <div class="row">  
+         <div class="col-md-6">
+        <div class="form-group">
+          <label for="empId">Employee ID:</label>
+          <input [(ngModel)]="employeeId"type="text" class="form-control" id="empId" name="empId" placeholder="Enter employee id" required="required">
+        </div>
+        </div>
+          <div class="col-md-6 ">  
+        <div class="form-group">
+          <label for="userName">Name:</label>
+          <input [(ngModel)]="name" type="text" class="form-control" id="userName" required="required"  placeholder="Enter Name" name="userName">
+        </div>
+        </div>
+        <div class="col-md-6" >
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input [(ngModel)]="passwrd" type="password" class="form-control" id="pass" required="required" placeholder="Set password" name="pass">
+        </div>
+        </div>
+                <div class="col-md-6">
+        <div class="form-group">
+          <label for="pwd">Confirm Password:</label>
+          <input type="password" class="form-control" id="pwd" required="required" placeholder="Re-Enter password" name="pswd">
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="form-group">
+          <label for="mailId">Email ID:</label>
+          <input [(ngModel)]="mailId" type="email" class="form-control" id="mailId" required="required" placeholder="Enter e-mail id" name="mailId">
+        </div>
+        </div>
+            <div class="col-md-6">
+        <div class="form-group">
+          <label for="contactNo">Contact No:</label>
+          <input [(ngModel)]="contactNo" type="text" class="form-control" id="contactNo" required="required" pattern="^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$" placeholder="Enter contact No" name="contactNo">
+        </div>
+        </div>
+    
+        </div>
+        <br/><br/>
+        <button type="submit" class="btn btn-outline-primary" (click)="registerEmployee()">Submit</button>
+         <button type="reset" class="btn btn-outline-danger">Cancel</button>
+      </form>
+    </div>
+    

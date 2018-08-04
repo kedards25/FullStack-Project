@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Employee Details</h2>
+  <!-- <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>             -->
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>E-Mail</th>
+        <th>Contact No</th>
+        <th>User type</th>
+        <th>Is Approval Pending</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of empList">
+        <td>{{e.employeeId}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.mailId}}</td>
+        <td>{{e.contactNo}}</td>
+        <td>{{e.userType}}</td>
+        <td>{{e.pending}}</td>
+        <td><a class="btn btn-outline-primary" role="button" routerLink="/editDetails">Edit</a></td>
+        <td><a class="btn btn-outline-danger" role="button" routerLink="/removeEmp">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
